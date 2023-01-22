@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 ## 码码更健康
 =======
-## 码码更健康1111
+## 码码更健康1111ZQ
 >>>>>>> a2ee2f9 (init repo)
 
 ## 资料
 **PS D:\ideaworkspace\community> git init** 
-Initialized empty Git repository in D:/ideaworkspace/community/.git/
+Initialized empty Git repZository in D:/ideaworkspace/community/.git/
 
 **PS D:\ideaworkspace\community> git add .**
 warning: in the working copy of '.mvn/wrapper/maven-wrapper.properties', LF will be replaced by CRLF the next time Git touches it

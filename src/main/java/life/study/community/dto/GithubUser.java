@@ -2,18 +2,9 @@ package life.study.community.dto;
 
 public class GithubUser {
     private String name;
-    private String login;
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
     private String id;
     private String bio;
+
 
     public String getName() {
         return name;
@@ -43,7 +34,6 @@ public class GithubUser {
     public String toString() {
         return "GithubUser{" +
                 "name='" + name + '\'' +
-                ", login='" + login + '\'' +
                 ", id='" + id + '\'' +
                 ", bio='" + bio + '\'' +
                 '}';

@@ -2,14 +2,7 @@ package life.study.community.provider;
 
 import life.study.community.dto.AccessTokenDto;
 import life.study.community.unilt.SslUtils;
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.conn.ssl.NoopHostnameVerifier;
-import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
+
 import org.springframework.stereotype.Component;
 
 import javax.net.ssl.SSLContext;
@@ -29,39 +22,6 @@ import java.security.cert.X509Certificate;
 @Component
 public class Provide {
 
-    public  String httpGet(String accessToken) throws Exception {
-
-        CloseableHttpClient httpClient = HttpClients.createDefault();
-        CloseableHttpResponse httpResponse=null;
-        String finalString = null;
-        HttpGet httpGet = new HttpGet("https://api.github.com/user");
-        /**公共参数添加至httpGet*/
-
-            /**header中通用属性*/
-            httpGet.setHeader("Accept","*/*");
-            httpGet.setHeader("Accept-Encoding","gzip, deflate");
-            httpGet.setHeader("Cache-Control","no-cache");
-            httpGet.setHeader("Connection", "keep-alive");
-            httpGet.setHeader("Content-Type", "application/json;charset=UTF-8");
-            httpGet.setHeader("Authorization","token "+accessToken);
-
-            try {
-            httpResponse = httpClient.execute(httpGet);
-            HttpEntity entity = httpResponse.getEntity();
-            finalString= EntityUtils.toString(entity, "UTF-8");
-            try {
-                httpResponse.close();
-                httpClient.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(finalString);
-
-        return finalString;
-    }
     public  String sendPost( AccessTokenDto accessTokenDto) {
         String url="https://github.com/login/oauth/access_token?client_id=fd1d5ffc3e73e6451389&client_secret=9f03ff12c788b6b001bad9d2d55b1a1418d890d6&redirect_uri=http://localhost:8080/callback&state=1&code="+accessTokenDto.getCode();
         String param="";

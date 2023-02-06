@@ -82,9 +82,9 @@ public class GithubProvider {
                 ex.printStackTrace();
             }
         }
-        System.out.println(result);
+
         String token = result.split("&")[0].split("=")[1];
-        System.out.println(token);
+
         return token;
     }
 

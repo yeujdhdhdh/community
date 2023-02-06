@@ -1,0 +1,112 @@
+  <!DOCTYPE HTML>
+  <html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>发布</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/test.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+  </head>
+  <body>
+  <script type="text/javascript">
+    clickNum=0
+    function click(){
+      clickNum=1
+    }
+  </script>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">study社区</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">study社区</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">搜索</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li th:if="${session.user!=null}"><a href="/publish">发布</a></li>
+          <li th:if="${session.user==null}"><a href="https://github.com/login/oauth/authorize?client_id=fd1d5ffc3e73e6451389&redirect_uri=http://localhost:8080/callback&scope=user&state=1">登录</a></li>
+          <li class="dropdown" th:if="${session.user !=null}">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我 <span class="caret"></span></a><ul class="dropdown-menu">
+            <li><a href="#" th:text="${session.user.getName()}"></a></li>
+            <li><a href="#">消息中心</a></li>
+            <li><a href="#">个人资料</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">退出登录</a></li>
+          </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid main">
+    <div class="row">
+      <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" style="background-color: #1b6d85;height:600px">
+        <h2><span class="glyphicon glyphicon-search" aria-hidden="true"></span> 发起</h2>
+        <hr>
+        <form action="/publish1" method="post">
+          <div class="form-group">
+            <label for="title">主题：</label>
+            <label th:if="${(title=='') && (session.errorTag !=0 )}"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>主题不能为空</label>
+            <input type="text" class="form-control" id="title" th:value="${title}" name="title" placeholder="title">
+
+          </div>
+          <div class="form-group">
+            <label for="description">问题描述：</label>
+            <label th:if="${(description=='') && (session.errorTag !=0 )}"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>问题描述不能为空</label>
+            <textarea name="description" id="description"  class="form-control" th:value="${description}" cols="30" rows="10"></textarea>
+
+          </div>
+          <div class="form-group">
+            <label for="tag">问题种类：</label>
+            <label th:if="${(tag=='') && (session.errorTag !=0 )}"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>标签不能为空</label>
+            <input type="text" class="form-control" name="tag" id="tag" th:value="${tag}" placeholder="tag">
+          </div>
+          <div class="form-group">
+            <label class="button" th:if="${session.user==null}"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>请登录</label>
+          <button type="submit" class="btn btn-success button" onclick="click()">提交</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" style="background-color: #2aabd2;height: 600px">
+        <h3>发布指南</h3>
+        主题：请用精简的语言描述你的问题<br>
+        问题描述：请详细描述你的问题<br>
+        问题种类：不超过10个字每个种类<br>
+      </div>
+
+    </div>
+  </div>
+  </body>
+  </html>

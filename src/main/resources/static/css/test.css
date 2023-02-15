@@ -7,3 +7,26 @@
     float: right;
     margin-top: 10px;
 }
+.listImg{
+    width:60px;height:60px;
+}
+.test_des{
+    font-size: 12px;
+    font-weight: normal;;
+    color: #5bc0de;
+}
+.headImg{
+    width: 25px;
+    height: 25px;
+}
+.textColor{
+    text-decoration-color: #ac2925;
+}
+.devPage{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.userQuestion .section{
+    margin-top: 15px;
+}

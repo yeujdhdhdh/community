@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${sectionName}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="/css/background.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+</head>
+<body>
+<div th:insert="background::background"></div>
+    <div th:insert="navgation::nav"></div>
+<div class="container-fluid main userQuestion">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" style="background-color: #1b6d85;height:600px">
+            <h2><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> <span th:text="${sectionName}"></span></h2>
+            <hr>
+            <div class="media"  th:each="question:${userPageDto.questionDtos}">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="img-circle listImg" th:src="${question.user.imgUrl}" >
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading" th:text="${question.title}"></h4>
+                    <span th:text="${question.tag}"></span><br>
+                    <span class="test_des"><span th:text="${question.commentCount}"></span>回复·<span th:text="${question.viveCount}"></span>浏览·<span th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm:ss')}"></span></span>
+                </div>
+            </div>
+            <nav aria-label="Page navigation" class="devPage">
+                <ul class="pagination" style="float: right" >
+                    <li th:if="${userPageDto.showFirstPage}">
+                        <a  aria-label="Previous"th:href="@{/userAllQuestion/questions/(page='1')}" >
+                            <span aria-hidden="true">&lt;&lt;</span>
+                        </a>
+                    </li>
+                    <li th:if="${userPageDto.showPrevious}">
+                        <a aria-label="Previous"th:href="@{/userAllQuestion/questions/(page=${userPageDto.prePage})}" >
+                            <span aria-hidden="true">&lt;</span>
+                        </a>
+                    </li>
+                    <li th:each="page: ${userPageDto.thisPages}" th:class="${userPageDto.thisPage==page}?'active':''"><a th:href="@{/userAllQuestion/questions/(page=${page})}" th:text="${page}">1</a></li>
+                    <li th:if="${userPageDto.showNextPage}">
+                        <a  aria-label="Previous"th:href="@{/userAllQuestion/questions/(page=${userPageDto.nextPage})}">
+                            <span aria-hidden="true" >&gt;</span>
+                        </a>
+                    </li>
+                    <li th:if="${userPageDto.showEndPage}">
+                        <a  aria-label="Previous"th:href="@{/userAllQuestion/questions/(page=${userPageDto.totalPage})}" >
+                            <span aria-hidden="true">&gt;&gt;</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" style="background-color: #2aabd2;height: 600px">
+            <div class="list-group section">
+                <a href="/userAllQuestion/questions" th:class="${section=='questions'}?'active list-group-item':'list-group-item'">
+                    我的问题
+                </a>
+                <a href="/userAllQuestion/replies" th:class="${section=='replies'}?'active list-group-item':'list-group-item'">最新回复 <span class="badge">14</span> </a>
+                <a href="#" class="list-group-item">Morbi leo risus</a>
+                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                <a href="#" class="list-group-item">Vestibulum at eros</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

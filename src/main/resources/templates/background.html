@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>study社区</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="/css/background.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+<body>
+<div th:fragment="background">
+    <video id="v1" autoplay muted loop class="videoBack" style="width: 100%">
+        <source src="/video/VCG42N1139571890_5.mp4">
+        <script>
+            video=document.getElementById('v1');
+            video.playbackRate=0.5;
+        </script>
+    </video>
+
+</div>
+</body>

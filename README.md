@@ -46,14 +46,16 @@
 
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 
-
+``sql:
 @Insert("insert into user (name,account_id,token,gmt_create,GMT_MODIFIED) value (#{user.name},#{user.accountId},#{user.token},#{user.gmtCreate},#{user.gmtModified})")
-    void insert(@Param("user") User user);
-    @Select("select * from user where token=#{token}")
-    User findByToken(@Param("token") String token);
-    @Select("seect * from user where id=#{id}")
-    User findById(@Param("id")Integer id);
-    @Select("select * from user where account_id=#{accountId}")
-    User findByAccountId(@Param("accountId")String accountId);
-    @Update("update user set name=#{dbUser.name},token=#{dbUser.token},gmt_modified=#{dbUser.gmtModified},img_url=#{dbUser.imgUrl} where id=#{dbUser.id}")
-    void userUpdate(@Param("dbUser") User dbUser);
+void insert(@Param("user") User user);
+@Select("select * from user where token=#{token}")
+User findByToken(@Param("token") String token);
+@Select("seect * from user where id=#{id}")
+User findById(@Param("id")Integer id);
+@Select("select * from user where account_id=#{accountId}")
+User findByAccountId(@Param("accountId")String accountId);
+@Update("update user set name=#{dbUser.name},token=#{dbUser.token},gmt_modified=#{dbUser.gmtModified},img_url=#{dbUser.imgUrl} where id=#{dbUser.id}")
+void userUpdate(@Param("dbUser") User dbUser);
+``
+    

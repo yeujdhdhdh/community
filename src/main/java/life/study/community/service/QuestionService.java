@@ -2,7 +2,10 @@ package life.study.community.service;
 
 import life.study.community.dto.PageDto;
 import life.study.community.dto.QuestionDto;
+import life.study.community.exceptiopn.CustomizeErrorCode;
+import life.study.community.exceptiopn.CustomizeException;
 import life.study.community.mapper.QuestionMapper;
+import life.study.community.mapper.QuestionMyMapper;
 import life.study.community.mapper.UserMapper;
 import life.study.community.model.*;
 import org.apache.ibatis.session.RowBounds;
@@ -17,6 +20,8 @@ import java.util.List;
 public class QuestionService {
     @Autowired
     private QuestionMapper questionMapper;
+    @Autowired
+    private QuestionMyMapper questionMyMapper;
     @Autowired
     private UserMapper userMapper;
     public PageDto list(Integer page, Integer size) {
@@ -87,6 +92,9 @@ public class QuestionService {
         QuestionKey questionKey=new QuestionKey();
         questionKey.setId(id);
         Question question=questionMapper.selectByPrimaryKey(questionKey);
+        if (question==null){
+            throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+        }
         QuestionDto questionDto=new QuestionDto();
         BeanUtils.copyProperties(question,questionDto);
         UserKey userKey=new UserKey();
@@ -106,6 +114,10 @@ public class QuestionService {
     public void createOrUpdate(Question question) {
         if (question.getId() == null) {
             //create
+            question.setLikeCount(0);
+
+            question.setViveCount(0);
+            question.setCommentCount(0);
             question.setGmtCreate(System.currentTimeMillis());
             question.setGmtModified(question.getGmtCreate());
 
@@ -123,6 +135,16 @@ public class QuestionService {
             example.createCriteria()
                             .andIdEqualTo(question.getId());
             questionMapper.updateByExampleSelective(updateQuestion, example);
+
         }
+    }
+
+    public void incView(Integer id) {
+        Question question=new Question();
+        question.setId(id);
+        question.setViveCount(1);
+        questionMyMapper.incView(question);
+
+
     }
 }

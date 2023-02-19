@@ -32,12 +32,26 @@ public class PublishController {
 
         return "publish";
     }
-    @PostMapping("/publish1")
-    public String doPublish(
-            @RequestParam("title")String title,
-            @RequestParam("description")String  description,
-            @RequestParam("tag")String tag,
+    @GetMapping("/publish/{id}")
+    public String questionUpdate(@PathVariable(name = "id")Integer id,Model model){
+        if (id==null){
+            return "redirect:/question/"+id;
+        }else {
+            QuestionDto question=questionService.getById(id);
+            model.addAttribute("title",question.getTitle());
+            model.addAttribute("description",question.getDescription());
+            model.addAttribute("tag",question.getTag());
+            model.addAttribute("id",question.getId());
+            return "publish";
+        }
 
+    }
+    @PostMapping("/publish")
+    public String doPublish(
+            @RequestParam(value = "title",required = false)String title,
+            @RequestParam(value = "description",required = false)String  description,
+            @RequestParam(value = "tag",required = false)String tag,
+            @RequestParam(value = "id",required = false)Integer id,
             HttpServletRequest request, Model model
     ){
 
@@ -69,25 +83,13 @@ public class PublishController {
         question.setTitle(title);
         question.setDescription(description);
         question.setCreator(user.getId());
-//        question.setId(id);
+        System.out.println(id);
+        question.setId(id);
         question.setGmtCreate(System.currentTimeMillis());
         question.setGmtModified(question.getGmtCreate());
         questionService.createOrUpdate(question);
 
         return "redirect:/";
     }
-    @GetMapping("/publish/{id}")
-    public String questionUpdate(@PathVariable(name = "id")Integer id,Model model){
-        if (id==null){
-            return "redirect:/question/"+id;
-        }else {
-            QuestionDto question=questionService.getById(id);
-            model.addAttribute("title",question.getTitle());
-            model.addAttribute("description",question.getDescription());
-            model.addAttribute("tag",question.getTag());
-            model.addAttribute("id",question.getId());
-            return "publish";
-        }
 
-    }
 }

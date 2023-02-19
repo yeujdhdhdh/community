@@ -288,4 +288,19 @@ public class Question extends QuestionKey {
     public void setTag(String tag) {
         this.tag = tag == null ? null : tag.trim();
     }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
+                ", creator=" + creator +
+                ", commentCount=" + commentCount +
+                ", viveCount=" + viveCount +
+                ", likeCount=" + likeCount +
+                ", tag='" + tag + '\'' +
+                '}';
+    }
 }

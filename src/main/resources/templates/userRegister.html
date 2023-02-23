@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>study社区</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="/css/background.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+    <style>
+        body {
+            background: url("/video/BingWallpaper.jpg") no-repeat;
+            background-size: 100% 130%;
+        }
+
+        #login_box {
+            width: 1000px;
+            height: 600px;
+            background-color: #00000060;
+            margin: auto;
+            margin-top: 10%;
+            text-align: center;
+            border-radius: 10px;
+            padding: 50px 50px;
+        }
+
+        h2 {
+            color: #ffffff90;
+            margin-top: 5%;
+        }
+
+        #input-box {
+            margin-top: 5%;
+        }
+
+        span {
+            color: #fff;
+        }
+
+        input {
+            border: 0;
+            width: 40%;
+            font-size: 15px;
+            color: yellow;
+            background: transparent;
+            border-bottom: 2px solid #fff;
+            padding: 5px 10px;
+            outline: none;
+
+            margin-top: 10px;
+        }
+        input::-webkit-input-placeholder { /* WebKit browsers */
+            color:white;
+        }
+
+        input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:white;
+        }
+
+        input::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:white;
+        }
+
+        input:-ms-input-placeholder { /* Internet Explorer 10+ */
+            color:white;
+        }
+
+
+
+        button {
+            margin-top: 50px;
+            width: 30%;
+            height: 30px;
+            border-radius: 10px;
+            border: 0;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+
+            background-image: linear-gradient(to right, #30cfd0, #330867);
+        }
+
+        #sign_up {
+            margin-top: 45%;
+            margin-left: 60%;
+        }
+
+        a {
+            color: #b94648;
+        }
+    </style>
+</head>
+<body >
+<div th:insert="background"></div>
+
+<div id="login_box" >
+    <div >
+        <h2>REGISTER</h2>
+        <form href="/userRegister" method="post">
+
+        <div id="input_box" style="margin:20px 0">
+            <span> username:</span> <input  id="username" name="username" size="15" style="color: white"type="text" placeholder="请输入用户名">
+        </div>
+        <div class="input_box"style="margin:20px 0">
+            <span> &nbsp;&nbsp;password:</span><input id="password" name="password" size="15" style="color: white" type="password" placeholder="请输入密码">
+        </div>
+        <div class="input_box"style="margin:20px 0">
+            <span> &nbsp;&nbsp;你的简介:</span><input id="bio" name="bio" size="15" style="color: white" type="text">
+        </div>
+        <div class="input_box"style="margin:20px 0;">
+            <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;头像:</span><input size="15" style="color: white" type="text">
+        </div>
+        <button type="submit" style="margin-top: 10px">register</button><br>
+        </form>
+
+    </div>
+    <div  th:if="${(resYes!=null)}" class="alert alert-success" style="margin-top: 20px" role="alert"><a href="/login"  th:text="${resYes}"></a></div>
+    <div  th:if="${(resNo!=null)}" class="alert alert-danger" style="width:500px;margin-top: 20px" role="alert"><span th:text="${resNo}"></span></div>
+</div>
+</body>
+</html>

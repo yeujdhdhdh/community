@@ -444,7 +444,7 @@ fieldset[disabled] .btn-danger.active {
   background-image: linear-gradient(to bottom, #f2dede 0%, #e7c3c3 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2dede', endColorstr='#ffe7c3c3', GradientType=0);
   background-repeat: repeat-x;
-  border-color: #dca7a7;
+  border-color: #f80b0b;
 }
 .progress {
   background-image: -webkit-linear-gradient(top, #ebebeb 0%, #f5f5f5 100%);

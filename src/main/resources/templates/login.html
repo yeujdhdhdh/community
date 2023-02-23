@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>study社区</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/test.css">
+  <link rel="stylesheet" href="/css/background.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+  <script src="/js/community.js" type="application/javascript"></script>
+  <style>
+    body {
+      background: url("/video/BingWallpaper.jpg") no-repeat;
+      background-size: 100% 130%;
+    }
+
+    #login_box {
+      width: 600px;
+      height: 600px;
+      background-color: #00000060;
+      margin: auto;
+      margin-top: 10%;
+      text-align: center;
+      border-radius: 10px;
+      padding: 50px 50px;
+    }
+
+    h2 {
+      color: #ffffff90;
+      margin-top: 5%;
+    }
+
+    #input-box {
+      margin-top: 5%;
+    }
+
+    span {
+      color: #fff;
+    }
+
+    input {
+      border: 0;
+      width: 60%;
+      font-size: 15px;
+      color: #fff;
+      background: transparent;
+      border-bottom: 2px solid #fff;
+      padding: 5px 10px;
+      outline: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 50px;
+      width: 60%;
+      height: 30px;
+      border-radius: 10px;
+      border: 0;
+      color: #fff;
+      text-align: center;
+      line-height: 30px;
+      font-size: 15px;
+      background-image: linear-gradient(to right, #30cfd0, #330867);
+    }
+
+    #sign_up {
+      margin-top: 45%;
+      margin-left: 60%;
+    }
+
+    a {
+      color: #b94648;
+    }
+  </style>
+
+</head>
+<body>
+<div th:insert="background"></div>
+
+<div id="login_box">
+  <div>
+    <h2>STUDY</h2>
+    <form id="myForm" href="/login" method="post">
+        <div id="input_box" style="margin:20px 0">
+          <input id="username" name="username" type="text" placeholder="请输入用户名">
+        </div>
+        <div class="input_box"style="margin:20px 0">
+          <input type="password" placeholder="请输入密码" id="password" name="password">
+        </div>
+        <button type="submit" style="margin-top: 10px" >登录</button><br>
+    </form>
+  <div class="row" style="margin: 50px 0; display: flex;justify-content: center" >
+    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-left: 20px">
+        <div class="media-left">
+          <a href="https://github.com/login/oauth/authorize?client_id=9471fd4d67acde79c495&redirect_uri=http://localhost:8080/loginCallback&scope=user&state=1"><img class="img-rounded listImg" src="/video/github.jfif" style="height:50px;width: 50px " ></a>
+          <br>
+          <h5 class="media-object" >
+          <span th:text="github"></span>
+          </h5>
+        </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+      <div class="media-left">
+        <a href="https://gitee.com/oauth/authorize?client_id=8c5056395c2bbd66739833bd864107ca80f5054a01df8e643d0c14faf2a0f951&redirect_uri=http://localhost:8080/loginGiteeCallback&response_type=code&scope=user_info">
+          <img class="img-rounded listImg" src="/video/gitee.jfif" style="height:50px;width: 50px "></a>
+        <br>
+        <h5 class="media-object" >
+          <span th:text="gitee"></span>
+        </h5>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+      <div class="media-left">
+        <a href="/userRegister"><img class="img-rounded listImg" src="/video/user.jfif" style="height:50px;width: 50px "></a>
+        <br>
+        <h5 class="media-object" >
+          <span th:text="register"></span>
+        </h5>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div  th:if="${(loginCode!=null)}" class="alert alert-danger" style="width:500px;margin-top: 20px" role="alert"><span th:text="${loginCode}"></span></div>
+</div>
+<span th:text="${loginCode}"></span>
+
+
+</body>
+</html>

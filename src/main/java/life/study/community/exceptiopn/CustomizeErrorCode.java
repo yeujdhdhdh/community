@@ -16,6 +16,9 @@ public enum CustomizeErrorCode implements ICustomizeErrorCode{
     INVALID_OPERATION(2012, "兄弟，是不是走错房间了？"),
     USER_DISABLE(2013, "操作被禁用，如有疑问请联系管理员"),
     RATE_LIMIT(2014, "操作太快了，请稍后重试"),
+    CONTENT_NOTHING(2015,"内容为空，请填写"),
+    USERNAME_REPEAT(2016,"用户名重复，请更改用户名"),
+    PASSWORD_NON_CON(2017,"password应该为数字")
     ;
     @Override
     public String getMessage() {

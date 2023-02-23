@@ -4,7 +4,7 @@
     <title th:text="${sectionName}"></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/css/test.css">
     <link rel="stylesheet" href="/css/background.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
@@ -25,7 +25,8 @@
                     </a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading" th:text="${question.title}"></h4>
+                    <a th:href="@{'/question/'+${question.id}}">
+                    <h4 class="media-heading" th:text="${question.title}" ></h4> </a>
                     <span th:text="${question.tag}"></span><br>
                     <span class="test_des"><span th:text="${question.commentCount}"></span>回复·<span th:text="${question.viveCount}"></span>浏览·<span th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm:ss')}"></span></span>
                 </div>

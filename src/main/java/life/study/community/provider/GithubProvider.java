@@ -23,13 +23,16 @@ public class GithubProvider {
     private String clientSecret;
     @Value("${github.redirect.uri}")
     private String redirectUri;
+    @Value("${loginGithub.redirect.uri}")
+    private String loginGithubUrl;
     @Autowired
     private SslUtils sslUtils;
 
     public String getAccessToken(AccessTokenDto accessTokenDto) {
+
         String url="https://github.com/login/oauth/access_token?client_id="
-                +clientId+"&client_secret="+clientSecret+"&redirect_uri="
-                +redirectUri+"&state=1&code="+accessTokenDto.getCode();
+                +accessTokenDto.getClient_id()+"&client_secret="+accessTokenDto.getClient_secret()+"&redirect_uri="
+                +accessTokenDto.getRedirect_uri()+"&state=1&code="+accessTokenDto.getCode();
         String param="";
         System.out.println(url);
         PrintWriter out = null;

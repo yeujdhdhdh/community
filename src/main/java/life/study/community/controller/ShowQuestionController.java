@@ -21,12 +21,15 @@ public class ShowQuestionController {
     @GetMapping("/question/{id}")
     public String question(@PathVariable(name = "id")Integer id, Model model){
         QuestionDto questionDto=questionService.getById(id);
+        List<QuestionDto> relateQuestions =questionService.selectRelated(questionDto);
         List<CommentDto> commentDtoList=commentService.listByQuestion(id);
 
         //增加阅读数
         questionService.incView(id);
         model.addAttribute("comments",commentDtoList);
         model.addAttribute("showQuestion",questionDto);
+
+        model.addAttribute("relateQuestions",relateQuestions);
         return "question";
     }
 

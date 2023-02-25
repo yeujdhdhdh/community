@@ -32,6 +32,8 @@ public class UserRegisterController {
         user.setName(username);
         user.setAccountId(UUID.randomUUID().toString());
         user.setToken(UUID.randomUUID().toString());
+        user.setBio(bio);
+        user.setUsertype("locationUser");
         user.setPassword(password);
 
         user.setImgUrl("https://foruda.gitee.com/avatar/1676859954971005111/8796378_yswork_1676859954.png");

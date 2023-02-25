@@ -8,13 +8,17 @@ import life.study.community.mapper.QuestionMapper;
 import life.study.community.mapper.QuestionMyMapper;
 import life.study.community.mapper.UserMapper;
 import life.study.community.model.*;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 @Service
 public class QuestionService {
@@ -37,7 +41,9 @@ public class QuestionService {
             page=pageDto.getTotalPage();
         }
         Integer offSizeNum=size*abs(page-1);
-        List<Question> qusetions=questionMapper.selectByExampleWithRowbounds(new QuestionExample(),new RowBounds(offSizeNum,size));
+        QuestionExample example = new QuestionExample();
+        example.setOrderByClause("gmt_create desc");
+        List<Question> qusetions=questionMapper.selectByExampleWithRowbounds(example,new RowBounds(offSizeNum,size));
 
         for (Question question:qusetions){
             UserKey userKey=new UserKey();
@@ -72,6 +78,7 @@ public class QuestionService {
 
         QuestionExample example1 = new QuestionExample();
         example1.createCriteria().andCreatorEqualTo(userId);
+        example1.setOrderByClause("gmt_create desc");
         List<Question> qusetions=questionMapper.selectByExampleWithRowbounds(example1,new RowBounds(offSizeNum,size));
 
 
@@ -146,5 +153,29 @@ public class QuestionService {
         questionMyMapper.incView(question);
 
 
+    }
+
+    public List<QuestionDto> selectRelated(QuestionDto queryDTO) {
+        if (StringUtils.isBlank(queryDTO.getTag())) {
+            return new ArrayList<>();
+        }
+        String[] tags = StringUtils.split(queryDTO.getTag(), ",");
+        String regexpTag = Arrays
+                .stream(tags)
+                .filter(StringUtils::isNotBlank)
+                .map(t -> t.replace("+", "").replace("*", "").replace("?", ""))
+                .filter(StringUtils::isNotBlank)
+                .collect(Collectors.joining("|"));
+        Question question = new Question();
+        question.setId(queryDTO.getId());
+        question.setTag(regexpTag);
+
+        List<Question> questions = questionMyMapper.selectRelated(question);
+        List<QuestionDto> questionDTOS = questions.stream().map(q -> {
+            QuestionDto questionDTO = new QuestionDto();
+            BeanUtils.copyProperties(q, questionDTO);
+            return questionDTO;
+        }).collect(Collectors.toList());
+        return questionDTOS;
     }
 }

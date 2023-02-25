@@ -260,5 +260,69 @@ function comment(e) {
     var content = $("#input-" + commentId).val();
     comment2target(commentId, 2, content);
 }
+function selectTag(e) {
+    var value = e.getAttribute("data-tag");
+    var previous = $("#tag").val();
 
+    if (previous) {
+        var index = 0;
+        var appear = false; //记录value是否已经作为一个独立的标签出现过
+        while (true) {
+            index = previous.indexOf(value, index); //value字符串在previous中出现的位置
+            if (index == -1) break;
+            //判断previous中出现的value是否是另一个标签的一部分
+            //即value的前一个和后一个字符都是逗号","或者没有字符时，才说明value是一个独立的标签
+            if ((index == 0 || previous.charAt(index - 1) == ",")
+                && (index + value.length == previous.length || previous.charAt(index + value.length) == ",")
+            ) {
+                appear = true;
+                break;
+            }
+            index++; //用于搜索下一个出现位置
+        }
+        if (!appear) {
+            //若value没有作为一个独立的标签出现过
+            $("#tag").val(previous + ',' + value);
+        }
+    }
+    else {
+        $("#tag").val(value);
+    }
+}
+function showSelectTag() {
+    $("#select-tag").show();
+}
 
+function userChange(){
+
+    sessionStorage.setItem("judge",1);
+    let item = sessionStorage.getItem("judge");
+    console.log(item)
+    window.location.reload();
+
+}
+function userChangePost(){
+    var username=$("#username").val();
+    var bio=$("#bio").val();
+    var password=$("#password").val();
+    var str={"username":username,"bio":bio,"password":password}
+    if (username==null||bio==null){
+        alert("输入内容不能为空");
+    }else {
+        $.ajax({
+            contentType:"application/json",
+            type:"POST",
+            url:"/userChange",
+            data:JSON.stringify(str),
+            success:function (response){
+                if (response.code==200){
+                    window.location.reload();
+                }else {
+                    alert(response.message);
+                }
+                console.log(response);
+            },
+            dataType:"json"
+        })
+    }
+}

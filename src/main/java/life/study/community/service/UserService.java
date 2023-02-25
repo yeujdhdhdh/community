@@ -36,6 +36,8 @@ public class UserService {
             updateUser.setImgUrl(user.getImgUrl());
             updateUser.setName(user.getName());
             updateUser.setToken(user.getToken());
+            updateUser.setBio(user.getBio());
+            updateUser.setUsertype(user.getUsertype());
             UserExample example = new UserExample();
             example.createCriteria().andIdEqualTo(dbUser.getId());
             userMapper.updateByExampleSelective(updateUser,example);
@@ -67,6 +69,8 @@ public class UserService {
                 updateUser.setImgUrl(user.getImgUrl());
                 updateUser.setName(user.getName());
                 updateUser.setToken(user.getToken());
+                updateUser.setBio(user.getBio());
+                user.setUsertype(user.getUsertype());
                 UserExample example = new UserExample();
                 example.createCriteria().andIdEqualTo(dbUser.getId());
                 userMapper.updateByExampleSelective(updateUser, example);

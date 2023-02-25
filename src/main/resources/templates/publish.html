@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="/css/background.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="/js/community.js" type="application/javascript"></script>
   </head>
   <body >
   <div th:insert="background::background"></div>
   <div th:insert="navgation::nav"></div>
   <div class="container-fluid main">
     <div class="row">
-      <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" style="background-color: #1b6d85;height:600px">
+      <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" id="div1" style="background-color: #1b6d85;height:70%">
         <h2><span class="glyphicon glyphicon-search" aria-hidden="true"></span> 发起</h2>
         <hr>
         <form action="/publish" method="post">
@@ -30,13 +31,38 @@
             <label for="description">问题描述：</label>
             <label style="color: red" th:if="${(description=='') && (session.errorTag !=0 )}"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>问题描述不能为空</label>
             <textarea name="description" id="description"  class="form-control" th:text="${description}" cols="30" rows="10"></textarea>
-
           </div>
           <div class="form-group">
-            <label for="tag">问题种类：</label>
-            <label  style="color: red" th:if="${(tag=='') && (session.errorTag !=0 )}"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>标签不能为空</label>
-            <input type="text" class="form-control" name="tag" id="tag" th:value="${tag}" placeholder="tag">
-          </div>
+            <label for="tag">添加标签:</label>
+            <input type="text" class="form-control" th:value="${tag}" id="tag" name="tag"
+                   autocomplete="off"
+                   placeholder="输入标签，以，号分隔"
+                   onclick="showSelectTag()">
+            <div id="select-tag" class="publish-tag-tab">
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" th:each="selectCategory,selectCategoryStat: ${tags}"
+                    th:class="${selectCategoryStat.first ? 'active':''}">
+                  <a th:href="${'#'+selectCategory.categoryName}" aria-controls="home" role="tab"
+                     data-toggle="tab" th:text="${selectCategory.categoryName}"></a>
+                </li>
+              </ul>
+            </div>
+              <div class="tab-content">
+                <div role="tabpanel" th:id="${selectCategory.categoryName}"
+                     th:each="selectCategory: ${tags}"
+                     th:class="${selectCategoryStat.first ? 'active tab-pane':'tab-pane'}">
+                                <span>
+                                    <span th:each="selectTag: ${selectCategory.tags}">
+
+                                    <span class="community-tag glyphicon glyphicon-tags" onclick="selectTag(this)"
+                                          th:data-tag="${selectTag}"
+                                          th:text="${' '+selectTag}">
+                                    </span>
+                                </span>
+                                </span>
+                </div>
+              </div>
+            </div>
           <div class="form-group">
 
             <label class="button" style="color: red"th:if="${session.user==null}"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>请登录</label>
@@ -44,7 +70,7 @@
           </div>
         </form>
       </div>
-      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" style="background-color: #2aabd2;height: 600px">
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" id="div2" style="background-color: #2aabd2;height: 70%">
         <h3>发布指南</h3>
         主题：请用精简的语言描述你的问题<br>
         问题描述：请详细描述你的问题<br>
@@ -52,6 +78,11 @@
       </div>
 
     </div>
+
   </div>
+  <script>
+    document.getElementById("div2").style.height=document.getElementById("div1").scrollHeight+"px";
+
+  </script>
   </body>
   </html>

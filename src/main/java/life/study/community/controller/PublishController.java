@@ -1,5 +1,6 @@
 package life.study.community.controller;
 
+import life.study.community.cache.TagCache;
 import life.study.community.dto.QuestionDto;
 import life.study.community.mapper.QuestionMapper;
 import life.study.community.mapper.UserMapper;
@@ -29,14 +30,16 @@ public class PublishController {
     @GetMapping("/publish")
     public String publish(Model model,HttpServletRequest request){
         request.getSession().setAttribute("errorTag",0);
-
+        model.addAttribute("tags", TagCache.get());
         return "publish";
     }
+
     @GetMapping("/publish/{id}")
     public String questionUpdate(@PathVariable(name = "id")Integer id,Model model){
         if (id==null){
             return "redirect:/question/"+id;
         }else {
+            model.addAttribute("tags", TagCache.get());
             QuestionDto question=questionService.getById(id);
             model.addAttribute("title",question.getTitle());
             model.addAttribute("description",question.getDescription());
@@ -54,7 +57,7 @@ public class PublishController {
             @RequestParam(value = "id",required = false)Integer id,
             HttpServletRequest request, Model model
     ){
-
+        model.addAttribute("tags", TagCache.get());
         model.addAttribute("title",title);
         model.addAttribute("description",description);
         model.addAttribute("tag",tag);

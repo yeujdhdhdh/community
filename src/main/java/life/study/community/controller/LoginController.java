@@ -3,9 +3,6 @@ package life.study.community.controller;
 import life.study.community.dto.AccessTokenDto;
 import life.study.community.dto.GiteeUser;
 import life.study.community.dto.GithubUser;
-import life.study.community.exceptiopn.CustomizeErrorCode;
-import life.study.community.exceptiopn.CustomizeException;
-import life.study.community.mapper.UserMapper;
 import life.study.community.model.User;
 import life.study.community.provider.GiteeProvider;
 import life.study.community.provider.GithubProvider;
@@ -14,7 +11,6 @@ import life.study.community.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -72,9 +68,8 @@ public class LoginController {
             User user=new User();
             user.setName(githubUser.getName());
             user.setAccountId(githubUser.getId());;
-
             user.setToken(UUID.randomUUID().toString());
-
+            user.setUsertype("github");
             user.setImgUrl(githubUser.getAvatar_url());
             userService.createOrUpdate(user);
 
@@ -105,9 +100,9 @@ public class LoginController {
             User user=new User();
             user.setName(giteeUser.getName());
             user.setAccountId(giteeUser.getId());;
-
+            user.setBio(giteeUser.getBio());
+            user.setUsertype("gitee");
             user.setToken(UUID.randomUUID().toString());
-
             user.setImgUrl(giteeUser.getAvatarUrl());
             userService.createOrUpdate(user);
 

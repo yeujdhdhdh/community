@@ -37,6 +37,9 @@ public class UserQuestionController {
         } else if ("replies".equals(action)) {
             model.addAttribute("section","replies");
             model.addAttribute("sectionName","最新回复");
+        }else if ("user".equals(action)){
+            model.addAttribute("section","user");
+            model.addAttribute("sectionName",((User) request.getSession().getAttribute("user")).getName());
         }
         PageDto userPageDto = questionService.list(user.getId(), page, size);
         model.addAttribute("userPageDto",userPageDto);

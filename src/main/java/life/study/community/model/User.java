@@ -288,4 +288,19 @@ public class User extends UserKey {
     public void setUsertype(String usertype) {
         this.usertype = usertype == null ? null : usertype.trim();
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "accountId='" + accountId + '\'' +
+                ", name='" + name + '\'' +
+                ", token='" + token + '\'' +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", password='" + password + '\'' +
+                ", bio='" + bio + '\'' +
+                ", usertype='" + usertype + '\'' +
+                '}';
+    }
 }

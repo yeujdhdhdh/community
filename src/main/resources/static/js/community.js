@@ -294,7 +294,8 @@ function showSelectTag() {
 }
 
 function userChange(){
-
+    var user=session.getAttribute("user");
+    console.log(user);
     sessionStorage.setItem("judge",1);
     let item = sessionStorage.getItem("judge");
     console.log(item)

@@ -71,7 +71,7 @@ public class LoginController {
             user.setToken(UUID.randomUUID().toString());
             user.setUsertype("github");
             user.setImgUrl(githubUser.getAvatar_url());
-            userService.createOrUpdate(user);
+            userService.createOrUpdate(user,request);
 
             response.addCookie(new Cookie("token",user.getToken()));
             return "redirect:/";
@@ -104,7 +104,7 @@ public class LoginController {
             user.setUsertype("gitee");
             user.setToken(UUID.randomUUID().toString());
             user.setImgUrl(giteeUser.getAvatarUrl());
-            userService.createOrUpdate(user);
+            userService.createOrUpdate(user,request);
 
             response.addCookie(new Cookie("token",user.getToken()));
             return "redirect:/";

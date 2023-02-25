@@ -15,10 +15,10 @@
 <div th:insert="navgation::nav"></div>
 <div class="container-fluid main" >
     <div class="row" >
-        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" style="background-color: #1b6d85;height:600px">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" style="background-color: #1b6d85;min-height:700px" id="div1">
             <h2><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> 发现</h2>
             <hr>
-            <div class="media"  th:each="question:${pageDto.questionDtos}">
+            <div class="media"  th:each="question:${pageDto.data}">
                 <div class="media-left">
                     <a href="#">
                         <img class="img-circle listImg" th:src="${question.user.imgUrl}" >
@@ -58,11 +58,15 @@
                 </ul>
             </nav>
         </div>
-        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12"style="background-color: #2aabd2;height:600px">
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12"style="background-color: #2aabd2;" id="div2">
             <h3>热门话题</h3>
         </div>
     </div>
 </div>
+<script>
+    document.getElementById("div2").style.height=document.getElementById("div1").scrollHeight+"px";
+
+</script>
 
 </body>
 </html>

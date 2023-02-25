@@ -55,7 +55,7 @@ public class QuestionService {
             questionDto.setUser(user);
             questionDtoList.add(questionDto);
         }
-        pageDto.setQuestionDtos(questionDtoList);
+        pageDto.setData(questionDtoList);
         return pageDto;
     }
 
@@ -91,7 +91,7 @@ public class QuestionService {
             questionDto.setUser(user);
             questionDtoList.add(questionDto);
         }
-        pageDto.setQuestionDtos(questionDtoList);
+        pageDto.setData(questionDtoList);
         return pageDto;
     }
 

@@ -73,12 +73,13 @@
             <property name="enableSubPackages" value="true"/>
 
         </javaClientGenerator>
+        <table  tableName="notification" domainObjectName="Notification">
+            <columnOverride column="outerTitle" javaType="java.lang.String" jdbcType="VARCHAR" /></table>
 
+<!--        <table  tableName="user" domainObjectName="User">-->
 
-        <table  tableName="user" domainObjectName="User">
-
-            <columnOverride column="bio" javaType="java.lang.String" jdbcType="VARCHAR" />
-        </table>
+<!--            <columnOverride column="bio" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+<!--        </table>-->
 
 <!--        <table  tableName="question" domainObjectName="Question">-->
 <!--                <columnOverride column="description" javaType="java.lang.String" jdbcType="VARCHAR" />-->

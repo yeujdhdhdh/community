@@ -2,6 +2,8 @@ package life.study.community.service;
 
 import life.study.community.dto.CommentDto;
 import life.study.community.enums.CommentTypeEnum;
+import life.study.community.enums.NotificationStatusEnum;
+import life.study.community.enums.NotificationTypeEnum;
 import life.study.community.exceptiopn.CustomizeErrorCode;
 import life.study.community.exceptiopn.CustomizeException;
 import life.study.community.mapper.*;
@@ -29,8 +31,10 @@ public class CommentService {
     private QuestionMyMapper questionMyMapper;
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private NotificationMapper notificationMapper;
     @Transactional
-    public void insert(Comment comment) {
+    public void insert(Comment comment,User user) {
         if (comment.getParentId()==null||comment.getParentId()==0){
             throw new CustomizeException(CustomizeErrorCode.TARGET_PARAM_NOT_FOUND);
         }
@@ -61,9 +65,10 @@ public class CommentService {
             parentComment.setId(comment.getParentId());
             parentComment.setCommentCount(1);
             commentMyMapper.incCommentCount(parentComment);
+            System.out.println(user);
 
-//            // 创建通知
-//            createNotify(comment, dbComment.getCommentator(), commentator.getName(), question.getTitle(), NotificationTypeEnum.REPLY_COMMENT, question.getId());
+          // 创建通知
+           createNotify(comment, dbComment.getCommentator(), user.getName(), question.getTitle(), NotificationTypeEnum.REPLY_COMMENT, question.getId());
         }else {
             //回复问题
             QuestionKey questionKey=new QuestionKey();
@@ -76,10 +81,29 @@ public class CommentService {
             commentMapper.insert(comment);
             question.setCommentCount(1);
             questionMyMapper.incComment(question);
-//            // 创建通知
-//            createNotify(comment, question.getCreator(), commentator.getName(), question.getTitle(), NotificationTypeEnum.REPLY_QUESTION, question.getId());
+            System.out.println(user);
+            // 创建通知
+            createNotify(comment, question.getCreator(), user.getName(), question.getTitle(), NotificationTypeEnum.REPLY_QUESTION, question.getId());
         }
     }
+
+    private void createNotify(Comment comment, Integer receiver, String notifierName, String outerTitle, NotificationTypeEnum notificationType, Integer outerId) {
+//        if (receiver == comment.getCommentator()) {
+//            return;
+//        }
+        Notification notification = new Notification();
+        notification.setGmtCreate(System.currentTimeMillis());
+        notification.setType(notificationType.getType());
+        notification.setOuterid(outerId);
+        notification.setNotifier(comment.getCommentator());
+        notification.setStatus(NotificationStatusEnum.UNREAD.getStatus());
+        notification.setReceiver(receiver);
+        notification.setNotifiername(notifierName);
+        notification.setOutertitle(outerTitle);
+        notificationMapper.insert(notification);
+    }
+
+
     public List<CommentDto> listByQuestion(Integer id) {
         CommentExample example = new CommentExample();
         example.createCriteria()
@@ -149,4 +173,5 @@ public class CommentService {
 
         return commentDTOS;
     }
+
 }

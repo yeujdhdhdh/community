@@ -24,12 +24,15 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li th:if="${session.user!=null}"><a href="/publish">发布</a></li>
+                <li th:if="${session.user!=null}"><a href="/userAllQuestion/replies">通知 <span class="badge" th:text="${session.unreadCount}"></span></a></li>
                 <li th:if="${session.user==null}"><a href="https://github.com/login/oauth/authorize?client_id=fd1d5ffc3e73e6451389&redirect_uri=http://localhost:8080/callback&scope=user&state=1">登录</a></li>
                 <li class="dropdown" th:if="${session.user !=null}">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img th:src="${session.user.imgUrl}" alt="..." class="img-circle headImg"> <span class="caret"></span></a><ul class="dropdown-menu">
-                    <li><a href="#" th:text="${session.user.getName()}"></a></li>
+                    <li><a href="/userAllQuestion/user" th:text="${session.user.getName()}"></a></li>
                     <li><a href="/userAllQuestion/questions">我的问题</a></li>
-                    <li><a href="/userAllQuestion/replies">最新回复</a></li>
+                    <li><a href="/userAllQuestion/replies">我的消息</a></li>
+
+
                     <li role="separator" class="divider"></li>
                     <li><a href="/logout">退出登录</a></li>
                 </ul>

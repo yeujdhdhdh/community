@@ -65,7 +65,7 @@ public class CommentService {
             parentComment.setId(comment.getParentId());
             parentComment.setCommentCount(1);
             commentMyMapper.incCommentCount(parentComment);
-            System.out.println(user);
+
 
           // 创建通知
            createNotify(comment, dbComment.getCommentator(), user.getName(), question.getTitle(), NotificationTypeEnum.REPLY_COMMENT, question.getId());
@@ -81,7 +81,7 @@ public class CommentService {
             commentMapper.insert(comment);
             question.setCommentCount(1);
             questionMyMapper.incComment(question);
-            System.out.println(user);
+
             // 创建通知
             createNotify(comment, question.getCreator(), user.getName(), question.getTitle(), NotificationTypeEnum.REPLY_QUESTION, question.getId());
         }

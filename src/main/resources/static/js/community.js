@@ -294,8 +294,6 @@ function showSelectTag() {
 }
 
 function userChange(){
-    var user=session.getAttribute("user");
-    console.log(user);
     sessionStorage.setItem("judge",1);
     let item = sessionStorage.getItem("judge");
     console.log(item)
@@ -314,6 +312,30 @@ function userChangePost(){
             contentType:"application/json",
             type:"POST",
             url:"/userChange",
+            data:JSON.stringify(str),
+            success:function (response){
+                if (response.code==200){
+                    window.location.reload();
+                }else {
+                    alert(response.message);
+                }
+                console.log(response);
+            },
+            dataType:"json"
+        })
+    }
+
+}
+function removeNotification(){
+    var notificationId=$("#notificationId").val()
+    var str={"id":notificationId};
+    if (notificationId==null||notificationId==null){
+        alert("请刷新后继续");
+    }else {
+        $.ajax({
+            contentType:"application/json",
+            type:"POST",
+            url:"/removeNotification",
             data:JSON.stringify(str),
             success:function (response){
                 if (response.code==200){

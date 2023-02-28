@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/css/test.css">
     <link rel="stylesheet" href="/css/background.css">
+    <link rel="stylesheet" href="/css/editormd.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="/js/editormd.min.js" type="application/javascript"></script>
     <script src="/js/community.js" type="application/javascript"></script>
   </head>
   <body >
   <div th:insert="background::background"></div>
   <div th:insert="navgation::nav"></div>
-  <div class="container-fluid main">
-    <div class="row">
-      <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" id="div1" style="background-color: #1b6d85;height:70%">
+  <div class="container-fluid main" >
+    <div class="row" style="background-color: #2aabd2" >
+      <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12"  style="background-color: #1b6d85;height: 800px" >
         <h2><span class="glyphicon glyphicon-search" aria-hidden="true"></span> 发起</h2>
         <hr>
         <form action="/publish" method="post">
@@ -27,13 +29,37 @@
             <input type="text" class="form-control" id="title" th:value="${title}" name="title" placeholder="title">
 
           </div>
-          <div class="form-group">
-            <label for="description">问题描述：</label>
-            <label style="color: red" th:if="${(description=='') && (session.errorTag !=0 )}"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>问题描述不能为空</label>
-            <textarea name="description" id="description"  class="form-control" th:text="${description}" cols="30" rows="10"></textarea>
+<!--          <div class="form-group" id="questionDesc">-->
+<!--            <label for="description">问题描述：</label>-->
+<!--            <label style="color: red" th:if="${(description=='') && (session.errorTag !=0 )}"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>问题描述不能为空</label>-->
+<!--            <textarea name="description" id="description"  class="form-control" style="display: none" th:text="${description}" cols="30" rows="10"></textarea>-->
+<!--          </div>-->
+          <label for="tag">问题描述:</label><label style="color: red" th:if="${(description=='') && (session.errorTag !=0 )}"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>问题描述不能为空</label>
+          <div class="form-group" id="question-editor" style="z-index: 2">
+
+            <textarea name="description" id="description" th:text="${description}" style="display:none;"
+                      class="form-control"
+                      cols="30"
+                      rows="10"></textarea>
           </div>
+          <script type="text/javascript">
+            $(function () {
+              var editor = editormd("question-editor", {
+                width: "100%",
+                height: 350,
+                path: "/js/lib/",
+                delay: 0,
+                watch: false,
+                placeholder: "请输入问题描述",
+                imageUpload: true,
+                imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL: "/file/upload",
+              });
+            });
+          </script>
           <div class="form-group">
             <label for="tag">添加标签:</label>
+            <label style="color: red" th:if="${(tag=='') && (session.errorTag !=0 )}"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>标签不能为空</label>
             <input type="text" class="form-control" th:value="${tag}" id="tag" name="tag"
                    autocomplete="off"
                    placeholder="输入标签，以，号分隔"
@@ -70,8 +96,9 @@
           </div>
         </form>
       </div>
-      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" id="div2" style="background-color: #2aabd2;height: 70%">
-        <h3>发布指南</h3>
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" id="div2"  >
+        <h2>发布指南</h2>
+        <hr>
         主题：请用精简的语言描述你的问题<br>
         问题描述：请详细描述你的问题<br>
         问题种类：不超过10个字每个种类<br>
@@ -80,9 +107,6 @@
     </div>
 
   </div>
-  <script>
-    document.getElementById("div2").style.height=document.getElementById("div1").scrollHeight+"px";
 
-  </script>
   </body>
   </html>

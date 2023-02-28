@@ -2,24 +2,19 @@ package life.study.community.service;
 
 import life.study.community.dto.NotificationDTO;
 import life.study.community.dto.PageDto;
-import life.study.community.dto.QuestionDto;
 import life.study.community.enums.NotificationStatusEnum;
 import life.study.community.enums.NotificationTypeEnum;
 import life.study.community.exceptiopn.CustomizeErrorCode;
 import life.study.community.exceptiopn.CustomizeException;
 import life.study.community.mapper.NotificationMapper;
-import life.study.community.mapper.UserMapper;
 import life.study.community.model.*;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Service
 public class NotificationService {
@@ -90,5 +85,13 @@ public class NotificationService {
         BeanUtils.copyProperties(notification, notificationDTO);
         notificationDTO.setTypeName(NotificationTypeEnum.nameOfType(notification.getType()));
         return notificationDTO;
+    }
+
+    public int removeNotification(int id) {
+        NotificationKey notificationKey=new NotificationKey();
+        notificationKey.setId(id);
+        int res=notificationMapper.deleteByPrimaryKey(notificationKey);
+
+        return res;
     }
 }

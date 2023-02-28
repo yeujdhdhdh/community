@@ -35,23 +35,23 @@
             <nav aria-label="Page navigation" class="devPage">
                 <ul class="pagination" style="float: right" >
                     <li th:if="${pageDto.showFirstPage}">
-                        <a  aria-label="Previous"th:href="@{/(page='1')}" >
+                        <a  aria-label="Previous"th:href="@{/(page=1,search=${search})}" >
                             <span aria-hidden="true">&lt;&lt;</span>
                         </a>
                     </li>
                     <li th:if="${pageDto.showPrevious}">
-                        <a aria-label="Previous"th:href="@{/(page=${pageDto.prePage})}" >
+                        <a aria-label="Previous"th:href="@{/(page=${pageDto.prePage},search=${search})}" >
                             <span aria-hidden="true">&lt;</span>
                         </a>
                     </li>
-                    <li th:each="page: ${pageDto.thisPages}" th:class="${pageDto.thisPage==page}?'active':''"><a th:href="@{/(page=${page})}" th:text="${page}">1</a></li>
+                    <li th:each="page: ${pageDto.thisPages}" th:class="${pageDto.thisPage==page}?'active':''"><a th:href="@{/(page=${page},search=${search})}" th:text="${page}">1</a></li>
                     <li th:if="${pageDto.showNextPage}">
-                        <a  aria-label="Previous"th:href="@{/(page=${pageDto.nextPage})}">
+                        <a  aria-label="Previous"th:href="@{/(page=${pageDto.nextPage},search=${search})}">
                             <span aria-hidden="true" >&gt;</span>
                         </a>
                     </li>
                     <li th:if="${pageDto.showEndPage}">
-                        <a  aria-label="Previous"th:href="@{/(page=${pageDto.totalPage})}" >
+                        <a  aria-label="Previous"th:href="@{/(page=${pageDto.totalPage},search=${search})}" >
                             <span aria-hidden="true">&gt;&gt;</span>
                         </a>
                     </li>
@@ -59,8 +59,14 @@
             </nav>
         </div>
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12"style="background-color: #2aabd2;" id="div2">
-            <h3>热门话题</h3>
+            <h2><span class="glyphicon glyphicon-fire" aria-hidden="true" style="margin-right: 5px"></span>热门话题</h2>
+            <hr ><br>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:each="question:${hotQuestion}" style="margin: 6px 0;justify-content:center;height:30px;background-color: #1b6d85;border-radius:5px" >
+                    <a th:href="@{'/question/'+${question.id}}" style="font-size: 15px;color: white" th:text="${question.title}"></a><span class="glyphicon glyphicon-fire" aria-hidden="true" style="margin-right: 5px;float: right" th:text="${question.viveCount}"></span>
+            </div>
+
         </div>
+
     </div>
 </div>
 <script>

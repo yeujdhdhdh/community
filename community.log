@@ -1,0 +1,401 @@
+2023-02-28 08:53:15.275  INFO 17668 --- [restartedMain] l.study.community.CommunityApplication   : Starting CommunityApplication using Java 11.0.10 on DESKTOP-OQV1AF5 with PID 17668 (D:\ideaworkspace\community\target\classes started by 32026 in D:\ideaworkspace\community)
+2023-02-28 08:53:15.276  INFO 17668 --- [restartedMain] l.study.community.CommunityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 08:53:15.320  INFO 17668 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-28 08:53:15.320  INFO 17668 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-28 08:53:16.196  INFO 17668 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-28 08:53:16.206  INFO 17668 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-28 08:53:16.206  INFO 17668 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-28 08:53:16.276  INFO 17668 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-28 08:53:16.276  INFO 17668 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 955 ms
+2023-02-28 08:53:16.301  INFO 17668 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 08:53:16.434  INFO 17668 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 08:53:16.442  INFO 17668 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/studycommunity?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true'
+2023-02-28 08:53:17.059  INFO 17668 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-28 08:53:17.090  INFO 17668 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-28 08:53:17.099  INFO 17668 --- [restartedMain] l.study.community.CommunityApplication   : Started CommunityApplication in 2.137 seconds (JVM running for 2.878)
+2023-02-28 08:53:30.789  INFO 17668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 08:53:30.796  INFO 17668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-28 08:53:33.205  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : Starting CommunityApplication using Java 11.0.10 on DESKTOP-OQV1AF5 with PID 19596 (D:\ideaworkspace\community\target\classes started by 32026 in D:\ideaworkspace\community)
+2023-02-28 08:53:33.206  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 08:53:33.246  INFO 19596 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-28 08:53:33.246  INFO 19596 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-28 08:53:34.242  INFO 19596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-28 08:53:34.252  INFO 19596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-28 08:53:34.252  INFO 19596 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-28 08:53:34.328  INFO 19596 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-28 08:53:34.328  INFO 19596 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1081 ms
+2023-02-28 08:53:34.355  INFO 19596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 08:53:34.515  INFO 19596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 08:53:34.523  INFO 19596 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/studycommunity?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true'
+2023-02-28 08:53:35.289  INFO 19596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-28 08:53:35.329  INFO 19596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-28 08:53:35.347  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : Started CommunityApplication in 2.536 seconds (JVM running for 3.629)
+2023-02-28 08:54:44.590  INFO 19596 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-02-28 08:54:44.741  INFO 19596 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-28 08:54:44.751  WARN 19596 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+2023-02-28 08:54:44.771  INFO 19596 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 08:54:44.779  INFO 19596 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-28 08:54:44.862  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : Starting CommunityApplication using Java 11.0.10 on DESKTOP-OQV1AF5 with PID 19596 (D:\ideaworkspace\community\target\classes started by 32026 in D:\ideaworkspace\community)
+2023-02-28 08:54:44.862  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 08:54:45.141  INFO 19596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-28 08:54:45.142  INFO 19596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-28 08:54:45.142  INFO 19596 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-28 08:54:45.154  INFO 19596 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-28 08:54:45.154  INFO 19596 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 289 ms
+2023-02-28 08:54:45.164  INFO 19596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-02-28 08:54:45.168  INFO 19596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-02-28 08:54:45.168  INFO 19596 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/studycommunity?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true'
+2023-02-28 08:54:45.326  INFO 19596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-28 08:54:45.333  INFO 19596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-28 08:54:45.337  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : Started CommunityApplication in 0.514 seconds (JVM running for 73.618)
+2023-02-28 08:54:45.338  INFO 19596 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-02-28 08:55:17.636  INFO 19596 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-02-28 08:55:17.741  INFO 19596 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-28 08:55:17.746  WARN 19596 --- [Thread-7] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+2023-02-28 08:55:17.753  INFO 19596 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-02-28 08:55:17.760  INFO 19596 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-02-28 08:55:17.826  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : Starting CommunityApplication using Java 11.0.10 on DESKTOP-OQV1AF5 with PID 19596 (D:\ideaworkspace\community\target\classes started by 32026 in D:\ideaworkspace\community)
+2023-02-28 08:55:17.826  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 08:55:18.113  INFO 19596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-28 08:55:18.114  INFO 19596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-28 08:55:18.114  INFO 19596 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-28 08:55:18.127  INFO 19596 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-28 08:55:18.127  INFO 19596 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 298 ms
+2023-02-28 08:55:18.136  INFO 19596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-02-28 08:55:18.139  INFO 19596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-02-28 08:55:18.139  INFO 19596 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/studycommunity?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true'
+2023-02-28 08:55:18.334  INFO 19596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-28 08:55:18.347  INFO 19596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-28 08:55:18.350  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : Started CommunityApplication in 0.558 seconds (JVM running for 106.632)
+2023-02-28 08:55:18.352  INFO 19596 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-02-28 08:56:23.492  INFO 19596 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-02-28 08:56:23.584  INFO 19596 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-28 08:56:23.590  WARN 19596 --- [Thread-11] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-3 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+2023-02-28 08:56:23.593  INFO 19596 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-02-28 08:56:23.597  INFO 19596 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-02-28 08:56:23.655  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : Starting CommunityApplication using Java 11.0.10 on DESKTOP-OQV1AF5 with PID 19596 (D:\ideaworkspace\community\target\classes started by 32026 in D:\ideaworkspace\community)
+2023-02-28 08:56:23.655  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 08:56:23.900  INFO 19596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-28 08:56:23.901  INFO 19596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-28 08:56:23.901  INFO 19596 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-28 08:56:23.914  INFO 19596 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-28 08:56:23.914  INFO 19596 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 257 ms
+2023-02-28 08:56:23.922  INFO 19596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-02-28 08:56:23.926  INFO 19596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-02-28 08:56:23.926  INFO 19596 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/studycommunity?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true'
+2023-02-28 08:56:24.066  INFO 19596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-28 08:56:24.073  INFO 19596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-28 08:56:24.076  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : Started CommunityApplication in 0.45 seconds (JVM running for 172.358)
+2023-02-28 08:56:24.077  INFO 19596 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-02-28 08:57:00.056  INFO 19596 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-02-28 08:57:00.188  INFO 19596 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-28 08:57:00.194  WARN 19596 --- [Thread-15] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-4 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+2023-02-28 08:57:00.197  INFO 19596 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-02-28 08:57:00.203  INFO 19596 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-02-28 08:57:00.247  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : Starting CommunityApplication using Java 11.0.10 on DESKTOP-OQV1AF5 with PID 19596 (D:\ideaworkspace\community\target\classes started by 32026 in D:\ideaworkspace\community)
+2023-02-28 08:57:00.247  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 08:57:00.467  INFO 19596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-28 08:57:00.467  INFO 19596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-28 08:57:00.467  INFO 19596 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-28 08:57:00.479  INFO 19596 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-28 08:57:00.479  INFO 19596 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 231 ms
+2023-02-28 08:57:00.487  INFO 19596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-02-28 08:57:00.491  INFO 19596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-02-28 08:57:00.491  INFO 19596 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/studycommunity?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true'
+2023-02-28 08:57:00.643  INFO 19596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-28 08:57:00.650  INFO 19596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-28 08:57:00.653  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : Started CommunityApplication in 0.426 seconds (JVM running for 208.934)
+2023-02-28 08:57:00.654  INFO 19596 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-02-28 08:57:33.364  INFO 19596 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-02-28 08:57:33.500  INFO 19596 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-28 08:57:33.506  WARN 19596 --- [Thread-19] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-5 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+2023-02-28 08:57:33.509  INFO 19596 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-02-28 08:57:33.513  INFO 19596 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2023-02-28 08:57:33.564  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : Starting CommunityApplication using Java 11.0.10 on DESKTOP-OQV1AF5 with PID 19596 (D:\ideaworkspace\community\target\classes started by 32026 in D:\ideaworkspace\community)
+2023-02-28 08:57:33.564  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 08:57:33.776  INFO 19596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-28 08:57:33.776  INFO 19596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-28 08:57:33.776  INFO 19596 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-28 08:57:33.788  INFO 19596 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-28 08:57:33.788  INFO 19596 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 222 ms
+2023-02-28 08:57:33.796  INFO 19596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-02-28 08:57:33.800  INFO 19596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-02-28 08:57:33.801  INFO 19596 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/studycommunity?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true'
+2023-02-28 08:57:33.941  INFO 19596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-28 08:57:33.949  INFO 19596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-28 08:57:33.953  INFO 19596 --- [restartedMain] l.study.community.CommunityApplication   : Started CommunityApplication in 0.409 seconds (JVM running for 242.235)
+2023-02-28 08:57:33.955  INFO 19596 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-02-28 08:59:14.314  INFO 19596 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-02-28 08:59:14.316  INFO 19596 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2023-02-28 08:59:17.747  INFO 18360 --- [restartedMain] l.study.community.CommunityApplication   : Starting CommunityApplication using Java 11.0.10 on DESKTOP-OQV1AF5 with PID 18360 (D:\ideaworkspace\community\target\classes started by 32026 in D:\ideaworkspace\community)
+2023-02-28 08:59:17.748  INFO 18360 --- [restartedMain] l.study.community.CommunityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 08:59:17.788  INFO 18360 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-28 08:59:17.788  INFO 18360 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-28 08:59:18.674  INFO 18360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-28 08:59:18.682  INFO 18360 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-28 08:59:18.682  INFO 18360 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-28 08:59:18.747  INFO 18360 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-28 08:59:18.748  INFO 18360 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 959 ms
+2023-02-28 08:59:18.779  INFO 18360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 08:59:18.945  INFO 18360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 08:59:18.951  INFO 18360 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/studycommunity?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true'
+2023-02-28 08:59:19.750  INFO 18360 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-28 08:59:19.790  INFO 18360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-28 08:59:19.802  INFO 18360 --- [restartedMain] l.study.community.CommunityApplication   : Started CommunityApplication in 2.394 seconds (JVM running for 3.156)
+2023-02-28 08:59:22.847  INFO 18360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 08:59:22.855  INFO 18360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-28 08:59:26.324  INFO 13440 --- [restartedMain] l.study.community.CommunityApplication   : Starting CommunityApplication using Java 11.0.10 on DESKTOP-OQV1AF5 with PID 13440 (D:\ideaworkspace\community\target\classes started by 32026 in D:\ideaworkspace\community)
+2023-02-28 08:59:26.326  INFO 13440 --- [restartedMain] l.study.community.CommunityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 08:59:26.388  INFO 13440 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-28 08:59:26.388  INFO 13440 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-28 08:59:27.352  INFO 13440 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-28 08:59:27.360  INFO 13440 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-28 08:59:27.360  INFO 13440 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-28 08:59:27.429  INFO 13440 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-28 08:59:27.429  INFO 13440 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1040 ms
+2023-02-28 08:59:27.454  INFO 13440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 08:59:27.607  INFO 13440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 08:59:27.613  INFO 13440 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/studycommunity?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true'
+2023-02-28 08:59:28.450  INFO 13440 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-28 08:59:28.477  INFO 13440 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-28 08:59:28.486  INFO 13440 --- [restartedMain] l.study.community.CommunityApplication   : Started CommunityApplication in 2.508 seconds (JVM running for 3.237)
+2023-02-28 08:59:29.151  INFO 13440 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-28 08:59:29.153  INFO 13440 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-28 08:59:29.154  INFO 13440 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-28 08:59:29.201 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:29.213 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: 7f8f717a-1aff-4ee0-b358-23077d299712(String)
+2023-02-28 08:59:29.222 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:29.227 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:29.227 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:29.228 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:29.244 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from question 
+2023-02-28 08:59:29.244 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.QuestionMapper.countByExample    : ==> Parameters: 
+2023-02-28 08:59:29.244 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2023-02-28 08:59:29.245 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select id, title, description, gmt_create, gmt_modified, creator, comment_count, vive_count, like_count, tag from question order by gmt_create desc 
+2023-02-28 08:59:29.245 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2023-02-28 08:59:29.247 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:29.247 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 4(Integer)
+2023-02-28 08:59:29.248 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:29.254 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:29.255 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2023-02-28 08:59:29.256 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:29.256 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:29.256 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 4(Integer)
+2023-02-28 08:59:29.257 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:29.258 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:29.258 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 4(Integer)
+2023-02-28 08:59:29.259 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:29.259 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:29.259 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 4(Integer)
+2023-02-28 08:59:29.260 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:29.260 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.QuestionMyMapper.getHotQuestion  : ==>  Preparing: select * from question order by vive_count desc limit 0,10; 
+2023-02-28 08:59:29.260 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.QuestionMyMapper.getHotQuestion  : ==> Parameters: 
+2023-02-28 08:59:29.262 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.QuestionMyMapper.getHotQuestion  : <==      Total: 10
+2023-02-28 08:59:29.576 DEBUG 13440 --- [http-nio-8080-exec-2] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:29.577 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:29.577 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:29.578 DEBUG 13440 --- [http-nio-8080-exec-2] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: 7f8f717a-1aff-4ee0-b358-23077d299712(String)
+2023-02-28 08:59:29.578 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:29.578 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: 7f8f717a-1aff-4ee0-b358-23077d299712(String)
+2023-02-28 08:59:29.578 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: 7f8f717a-1aff-4ee0-b358-23077d299712(String)
+2023-02-28 08:59:29.579 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: 7f8f717a-1aff-4ee0-b358-23077d299712(String)
+2023-02-28 08:59:29.579 DEBUG 13440 --- [http-nio-8080-exec-6] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:29.579 DEBUG 13440 --- [http-nio-8080-exec-6] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: 7f8f717a-1aff-4ee0-b358-23077d299712(String)
+2023-02-28 08:59:29.579 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:29.579 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:29.579 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:29.579 DEBUG 13440 --- [http-nio-8080-exec-2] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:29.580 DEBUG 13440 --- [http-nio-8080-exec-6] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:29.581 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:29.581 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:29.581 DEBUG 13440 --- [http-nio-8080-exec-2] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:29.581 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:29.582 DEBUG 13440 --- [http-nio-8080-exec-6] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:29.582 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:29.582 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:29.582 DEBUG 13440 --- [http-nio-8080-exec-6] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:29.583 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:29.583 DEBUG 13440 --- [http-nio-8080-exec-2] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:29.584 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:29.584 DEBUG 13440 --- [http-nio-8080-exec-2] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:29.584 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:29.584 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:29.584 DEBUG 13440 --- [http-nio-8080-exec-6] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:30.041 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:30.042 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: 7f8f717a-1aff-4ee0-b358-23077d299712(String)
+2023-02-28 08:59:30.043 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:30.044 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:30.045 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:30.046 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:31.122 DEBUG 13440 --- [http-nio-8080-exec-10] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:31.123 DEBUG 13440 --- [http-nio-8080-exec-10] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: 7f8f717a-1aff-4ee0-b358-23077d299712(String)
+2023-02-28 08:59:31.124 DEBUG 13440 --- [http-nio-8080-exec-10] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:31.125 DEBUG 13440 --- [http-nio-8080-exec-10] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:31.125 DEBUG 13440 --- [http-nio-8080-exec-10] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:31.126 DEBUG 13440 --- [http-nio-8080-exec-10] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:31.129 DEBUG 13440 --- [http-nio-8080-exec-10] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:31.130 DEBUG 13440 --- [http-nio-8080-exec-10] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: 7f8f717a-1aff-4ee0-b358-23077d299712(String)
+2023-02-28 08:59:31.130 DEBUG 13440 --- [http-nio-8080-exec-10] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:31.131 DEBUG 13440 --- [http-nio-8080-exec-10] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:31.131 DEBUG 13440 --- [http-nio-8080-exec-10] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:31.132 DEBUG 13440 --- [http-nio-8080-exec-10] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:33.553 DEBUG 13440 --- [http-nio-8080-exec-9] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:33.553 DEBUG 13440 --- [http-nio-8080-exec-9] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: 7f8f717a-1aff-4ee0-b358-23077d299712(String)
+2023-02-28 08:59:33.554 DEBUG 13440 --- [http-nio-8080-exec-9] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:33.555 DEBUG 13440 --- [http-nio-8080-exec-9] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:33.556 DEBUG 13440 --- [http-nio-8080-exec-9] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:33.557 DEBUG 13440 --- [http-nio-8080-exec-9] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:38.448 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from question 
+2023-02-28 08:59:38.448 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.QuestionMapper.countByExample    : ==> Parameters: 
+2023-02-28 08:59:38.448 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2023-02-28 08:59:38.449 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select id, title, description, gmt_create, gmt_modified, creator, comment_count, vive_count, like_count, tag from question order by gmt_create desc 
+2023-02-28 08:59:38.449 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2023-02-28 08:59:38.453 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:38.453 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2023-02-28 08:59:38.456 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:38.457 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:38.457 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2023-02-28 08:59:38.459 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:38.460 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:38.460 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2023-02-28 08:59:38.461 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:38.461 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:38.461 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2023-02-28 08:59:38.462 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:38.462 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:38.462 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2023-02-28 08:59:38.463 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:38.463 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.QuestionMyMapper.getHotQuestion  : ==>  Preparing: select * from question order by vive_count desc limit 0,10; 
+2023-02-28 08:59:38.463 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.QuestionMyMapper.getHotQuestion  : ==> Parameters: 
+2023-02-28 08:59:38.464 DEBUG 13440 --- [http-nio-8080-exec-1] l.s.c.m.QuestionMyMapper.getHotQuestion  : <==      Total: 10
+2023-02-28 08:59:46.258 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( account_id = ? ) 
+2023-02-28 08:59:46.259 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: 8796378(String)
+2023-02-28 08:59:46.260 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:46.263 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.m.U.updateByExampleSelective       : ==>  Preparing: update user SET name = ?, token = ?, GMT_MODIFIED = ?, img_url = ?, bio = ?, userType = ? WHERE ( id = ? ) 
+2023-02-28 08:59:46.264 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.m.U.updateByExampleSelective       : ==> Parameters: yswork(String), ef32be44-fa39-47d2-9884-e1aeeea26193(String), 1677545986260(Long), https://foruda.gitee.com/avatar/1676859954971005111/8796378_yswork_1676859954.png(String), studyCode(String), gitee(String), 2(Integer)
+2023-02-28 08:59:46.267 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.m.U.updateByExampleSelective       : <==    Updates: 1
+2023-02-28 08:59:46.267 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user 
+2023-02-28 08:59:46.267 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: 
+2023-02-28 08:59:46.268 DEBUG 13440 --- [http-nio-8080-exec-5] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 3
+2023-02-28 08:59:46.272 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:46.272 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: ef32be44-fa39-47d2-9884-e1aeeea26193(String)
+2023-02-28 08:59:46.273 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:46.274 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:46.274 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:46.275 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:46.275 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from question 
+2023-02-28 08:59:46.276 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.QuestionMapper.countByExample    : ==> Parameters: 
+2023-02-28 08:59:46.276 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2023-02-28 08:59:46.277 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select id, title, description, gmt_create, gmt_modified, creator, comment_count, vive_count, like_count, tag from question order by gmt_create desc 
+2023-02-28 08:59:46.277 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2023-02-28 08:59:46.279 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:46.279 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2023-02-28 08:59:46.280 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:46.281 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:46.281 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2023-02-28 08:59:46.282 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:46.283 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:46.283 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2023-02-28 08:59:46.284 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:46.285 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:46.285 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2023-02-28 08:59:46.285 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:46.285 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:46.285 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2023-02-28 08:59:46.286 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:46.286 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.QuestionMyMapper.getHotQuestion  : ==>  Preparing: select * from question order by vive_count desc limit 0,10; 
+2023-02-28 08:59:46.286 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.QuestionMyMapper.getHotQuestion  : ==> Parameters: 
+2023-02-28 08:59:46.287 DEBUG 13440 --- [http-nio-8080-exec-3] l.s.c.m.QuestionMyMapper.getHotQuestion  : <==      Total: 10
+2023-02-28 08:59:50.237 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:50.237 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: ef32be44-fa39-47d2-9884-e1aeeea26193(String)
+2023-02-28 08:59:50.238 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:50.239 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:50.239 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:50.239 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:50.241 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.Q.selectByPrimaryKey             : ==>  Preparing: select id, title, description, gmt_create, gmt_modified, creator, comment_count, vive_count, like_count, tag from question where id = ? 
+2023-02-28 08:59:50.242 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.Q.selectByPrimaryKey             : ==> Parameters: 92(Integer)
+2023-02-28 08:59:50.242 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.Q.selectByPrimaryKey             : <==      Total: 1
+2023-02-28 08:59:50.244 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:50.245 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2023-02-28 08:59:50.245 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:50.247 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.QuestionMyMapper.selectRelated   : ==>  Preparing: select * from question WHERE id != ? and tag regexp ? order by gmt_create desc limit 20 
+2023-02-28 08:59:50.248 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.QuestionMyMapper.selectRelated   : ==> Parameters: 92(Integer), spring mvc|java(String)
+2023-02-28 08:59:50.249 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.QuestionMyMapper.selectRelated   : <==      Total: 6
+2023-02-28 08:59:50.260 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.CommentMapper.selectByExample    : ==>  Preparing: select id, parent_id, type, commentator, gmt_create, gmt_modified, like_count, content, comment_count from comment WHERE ( parent_id = ? and type = ? ) order by gmt_create desc 
+2023-02-28 08:59:50.260 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.CommentMapper.selectByExample    : ==> Parameters: 92(Integer), 1(Integer)
+2023-02-28 08:59:50.261 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.m.CommentMapper.selectByExample    : <==      Total: 0
+2023-02-28 08:59:50.261 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.mapper.QuestionMyMapper.incView    : ==>  Preparing: update question set vive_count = vive_count + ? where id=? 
+2023-02-28 08:59:50.261 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.mapper.QuestionMyMapper.incView    : ==> Parameters: 1(Integer), 92(Integer)
+2023-02-28 08:59:50.262 DEBUG 13440 --- [http-nio-8080-exec-4] l.s.c.mapper.QuestionMyMapper.incView    : <==    Updates: 1
+2023-02-28 08:59:50.300 DEBUG 13440 --- [http-nio-8080-exec-2] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:50.301 DEBUG 13440 --- [http-nio-8080-exec-2] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: ef32be44-fa39-47d2-9884-e1aeeea26193(String)
+2023-02-28 08:59:50.301 DEBUG 13440 --- [http-nio-8080-exec-2] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:50.302 DEBUG 13440 --- [http-nio-8080-exec-2] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:50.302 DEBUG 13440 --- [http-nio-8080-exec-2] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:50.303 DEBUG 13440 --- [http-nio-8080-exec-2] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:50.361 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user WHERE ( token = ? ) 
+2023-02-28 08:59:50.362 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.mapper.UserMapper.selectByExample  : ==> Parameters: ef32be44-fa39-47d2-9884-e1aeeea26193(String)
+2023-02-28 08:59:50.363 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2023-02-28 08:59:50.364 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2023-02-28 08:59:50.365 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.N.countByExample                 : ==> Parameters: 2(Integer), 0(Integer)
+2023-02-28 08:59:50.366 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.N.countByExample                 : <==      Total: 1
+2023-02-28 08:59:50.367 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.Q.selectByPrimaryKey             : ==>  Preparing: select id, title, description, gmt_create, gmt_modified, creator, comment_count, vive_count, like_count, tag from question where id = ? 
+2023-02-28 08:59:50.367 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.Q.selectByPrimaryKey             : ==> Parameters: 92(Integer)
+2023-02-28 08:59:50.368 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.Q.selectByPrimaryKey             : <==      Total: 1
+2023-02-28 08:59:50.368 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, GMT_MODIFIED, img_url, password, bio, userType from user where id = ? 
+2023-02-28 08:59:50.369 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2023-02-28 08:59:50.369 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2023-02-28 08:59:50.370 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.QuestionMyMapper.selectRelated   : ==>  Preparing: select * from question WHERE id != ? and tag regexp ? order by gmt_create desc limit 20 
+2023-02-28 08:59:50.370 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.QuestionMyMapper.selectRelated   : ==> Parameters: 92(Integer), spring mvc|java(String)
+2023-02-28 08:59:50.371 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.QuestionMyMapper.selectRelated   : <==      Total: 6
+2023-02-28 08:59:50.376 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.CommentMapper.selectByExample    : ==>  Preparing: select id, parent_id, type, commentator, gmt_create, gmt_modified, like_count, content, comment_count from comment WHERE ( parent_id = ? and type = ? ) order by gmt_create desc 
+2023-02-28 08:59:50.376 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.CommentMapper.selectByExample    : ==> Parameters: 92(Integer), 1(Integer)
+2023-02-28 08:59:50.376 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.m.CommentMapper.selectByExample    : <==      Total: 0
+2023-02-28 08:59:50.376 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.mapper.QuestionMyMapper.incView    : ==>  Preparing: update question set vive_count = vive_count + ? where id=? 
+2023-02-28 08:59:50.376 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.mapper.QuestionMyMapper.incView    : ==> Parameters: 1(Integer), 92(Integer)
+2023-02-28 08:59:50.378 DEBUG 13440 --- [http-nio-8080-exec-7] l.s.c.mapper.QuestionMyMapper.incView    : <==    Updates: 1

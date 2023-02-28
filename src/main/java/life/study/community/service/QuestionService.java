@@ -2,6 +2,7 @@ package life.study.community.service;
 
 import life.study.community.dto.PageDto;
 import life.study.community.dto.QuestionDto;
+import life.study.community.dto.QuestionQueryDTO;
 import life.study.community.exceptiopn.CustomizeErrorCode;
 import life.study.community.exceptiopn.CustomizeException;
 import life.study.community.mapper.QuestionMapper;
@@ -28,11 +29,27 @@ public class QuestionService {
     private QuestionMyMapper questionMyMapper;
     @Autowired
     private UserMapper userMapper;
-    public PageDto list(Integer page, Integer size) {
+    public PageDto list(String search,Integer page, Integer size) {
+        if (StringUtils.isNotBlank(search)) {
+            System.out.println("=====111111111");
+            String[] tags = StringUtils.split(search, " ");
+            search = Arrays
+                    .stream(tags)
+                    .filter(StringUtils::isNotBlank)
+                    .map(t -> t.replace("+", "").replace("*", "").replace("?", ""))
+                    .filter(StringUtils::isNotBlank)
+                    .collect(Collectors.joining("|"));
+        }
+        System.out.println(search);
         PageDto pageDto=new PageDto();
+        QuestionQueryDTO questionQueryDTO=new QuestionQueryDTO();
+        if (StringUtils.isNotBlank(search)){
+            System.out.println("search"+search);
+            System.out.println("============222============================2===");
+        questionQueryDTO.setSearch(search);
+        Integer totalCount=questionMyMapper.countBySearch(questionQueryDTO);
+        System.out.println(totalCount);
 
-        Integer totalCount=questionMapper.countByExample(new QuestionExample());
-        List<QuestionDto> questionDtoList=new ArrayList<>();
         pageDto.setPage(totalCount,page,size);
         if (page<1){
             page=1;
@@ -43,8 +60,12 @@ public class QuestionService {
         Integer offSizeNum=size*abs(page-1);
         QuestionExample example = new QuestionExample();
         example.setOrderByClause("gmt_create desc");
-        List<Question> qusetions=questionMapper.selectByExampleWithRowbounds(example,new RowBounds(offSizeNum,size));
-
+        questionQueryDTO.setSize(size);
+        questionQueryDTO.setPage(offSizeNum);
+        System.out.println("s="+size+"   "+offSizeNum);
+        List<Question> qusetions=questionMyMapper.selectBySearch(questionQueryDTO);
+        System.out.println(qusetions);
+        List<QuestionDto> questionDtoList=new ArrayList<>();
         for (Question question:qusetions){
             UserKey userKey=new UserKey();
             userKey.setId(question.getCreator());
@@ -57,7 +78,39 @@ public class QuestionService {
         }
         pageDto.setData(questionDtoList);
         return pageDto;
+        } else {
+            System.out.println("========================================2===");
+            Integer totalCount=questionMapper.countByExample(new QuestionExample());
+            List<QuestionDto> questionDtoList=new ArrayList<>();
+            pageDto.setPage(totalCount,page,size);
+            if (page<1){
+                page=1;
+            }
+            if (page>pageDto.getTotalPage()){
+                page=pageDto.getTotalPage();
+            }
+            Integer offSizeNum=size*abs(page-1);
+            QuestionExample example = new QuestionExample();
+            example.setOrderByClause("gmt_create desc");
+            List<Question> qusetions=questionMapper.selectByExampleWithRowbounds(example,new RowBounds(offSizeNum,size));
+
+            for (Question question:qusetions){
+                UserKey userKey=new UserKey();
+                userKey.setId(question.getCreator());
+                User user=userMapper.selectByPrimaryKey(userKey);
+
+                QuestionDto questionDto=new QuestionDto();
+                BeanUtils.copyProperties(question,questionDto);
+                questionDto.setUser(user);
+                questionDtoList.add(questionDto);
+            }
+            pageDto.setData(questionDtoList);
+            return pageDto;
+        }
+
+
     }
+
 
     public PageDto list(Integer userId, Integer page, Integer size) {
         PageDto pageDto=new PageDto();
@@ -177,5 +230,11 @@ public class QuestionService {
             return questionDTO;
         }).collect(Collectors.toList());
         return questionDTOS;
+    }
+
+    public List<Question> getHotQuestion() {
+        List<Question> questions=questionMyMapper.getHotQuestion();
+
+        return questions;
     }
 }

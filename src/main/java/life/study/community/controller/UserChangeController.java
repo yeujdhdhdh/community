@@ -32,8 +32,6 @@ public class UserChangeController {
         updateUser.setAccountId(user.getAccountId());
         updateUser.setToken(user.getToken());
         updateUser.setGmtCreate(user.getGmtCreate());
-        System.out.println("updateUser==="+updateUser);
-
         userService.createOrUpdate(updateUser,request);
         return "redirect:/userAllQuestion/user";
     }

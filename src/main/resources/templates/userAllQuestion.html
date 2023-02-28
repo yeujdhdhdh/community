@@ -44,6 +44,7 @@
                 </div>
             <script>
                 if (sessionStorage.getItem("judge")==null){
+                    console.log(sessionStorage.getItem("judge"))
                     $("#username").attr("readonly","true");
                     $("#bio").attr("readonly","true");
                     $("#password").attr("readonly","true");
@@ -54,9 +55,9 @@
                     sessionStorage.removeItem("judge")
                 }
             </script>
-                <div th:if="${section}=='questions'" class="col-lg-9 col-md-12 col-sm-12 col-xs-12" style="background-color: #1b6d85;height:700px" id="div1">
+                <div th:if="${section}=='questions'" class="col-lg-9 col-md-12 col-sm-12 col-xs-12" style="background-color: #1b6d85;height:800px" id="div1">
                     <h2><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> <span th:text="${sectionName}"></span></h2>
-                    <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <hr><br>
                     <div class="media"  th:each="question:${userPageDto.data}">
                         <div class="media-left">
                             <a href="#">
@@ -103,30 +104,34 @@
 
                     <div th:each="notification:${userPageDto.data}">
                         <div class="alert alert-success" role="alert">
-                            <a th:text="${notification.notifiername}+' '+${notification.typeName}+' '+${notification.outertitle}" th:href="@{'/notification/'+${notification.id}}"></a><span class="label label-danger" th:if="${notification.status==0}">未读</span>
+                            <input type="hidden" th:value="${notification.id}" id="notificationId">
+                            <a th:text="${notification.notifiername}+' '+${notification.typeName}+' '+${notification.outertitle}" th:href="@{'/notification/'+${notification.id}}"></a>
+                            <span class="label label-danger" th:if="${notification.status==0}">未读</span><span onclick="removeNotification()" class="glyphicon glyphicon-remove" style="float: right"></span>
                         </div>
                     </div>
 
                     <nav aria-label="Page navigation" class="devPage" th:if="${action}!='user'">
                         <ul class="pagination" style="float: right" >
                             <li th:if="${userPageDto.showFirstPage}">
-                                <a  aria-label="Previous"th:href="@{/userAllQuestion/questions/(page='1')}" >
+                                <a  aria-label="Previous"th:href="@{/userAllQuestion/replies/(page='1')}" >
                                     <span aria-hidden="true">&lt;&lt;</span>
                                 </a>
                             </li>
                             <li th:if="${userPageDto.showPrevious}">
-                                <a aria-label="Previous"th:href="@{/userAllQuestion/questions/(page=${userPageDto.prePage})}" >
+                                <a aria-label="Previous"th:href="@{/userAllQuestion/replies/(page=${userPageDto.prePage})}" >
                                     <span aria-hidden="true">&lt;</span>
                                 </a>
                             </li>
-                            <li th:each="page: ${userPageDto.thisPages}" th:class="${userPageDto.thisPage==page}?'active':''"><a th:href="@{/userAllQuestion/questions/(page=${page})}" th:text="${page}">1</a></li>
+                            <li th:each="page: ${userPageDto.thisPages}" th:class="${userPageDto.thisPage==page}?'active':''">
+                                <a th:href="@{/userAllQuestion/replies/(page=${page})}" th:text="${page}">1</a>
+                            </li>
                             <li th:if="${userPageDto.showNextPage}">
-                                <a  aria-label="Previous"th:href="@{/userAllQuestion/questions/(page=${userPageDto.nextPage})}">
+                                <a  aria-label="Previous"th:href="@{/userAllQuestion/replies/(page=${userPageDto.nextPage})}">
                                     <span aria-hidden="true" >&gt;</span>
                                 </a>
                             </li>
                             <li th:if="${userPageDto.showEndPage}">
-                                <a  aria-label="Previous"th:href="@{/userAllQuestion/questions/(page=${userPageDto.totalPage})}" >
+                                <a  aria-label="Previous"th:href="@{/userAllQuestion/replies/(page=${userPageDto.totalPage})}" >
                                     <span aria-hidden="true">&gt;&gt;</span>
                                 </a>
                             </li>

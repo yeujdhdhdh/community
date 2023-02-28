@@ -1,0 +1,34 @@
+2023-02-28 08:49:50.291  INFO 13524 --- [restartedMain] l.study.community.CommunityApplication   : Starting CommunityApplication using Java 11.0.10 on DESKTOP-OQV1AF5 with PID 13524 (D:\ideaworkspace\community\target\classes started by 32026 in D:\ideaworkspace\community)
+2023-02-28 08:49:50.292  INFO 13524 --- [restartedMain] l.study.community.CommunityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 08:49:50.342  INFO 13524 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-28 08:49:50.343  INFO 13524 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-28 08:49:51.356  INFO 13524 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-28 08:49:51.366  INFO 13524 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-28 08:49:51.366  INFO 13524 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-28 08:49:51.436  INFO 13524 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-28 08:49:51.436  INFO 13524 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1092 ms
+2023-02-28 08:49:51.463  INFO 13524 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 08:49:51.609  INFO 13524 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 08:49:51.621  INFO 13524 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/studycommunity?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true'
+2023-02-28 08:49:52.365  INFO 13524 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-28 08:49:52.399  INFO 13524 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-28 08:49:52.410  INFO 13524 --- [restartedMain] l.study.community.CommunityApplication   : Started CommunityApplication in 2.494 seconds (JVM running for 3.323)
+2023-02-28 08:50:04.117  INFO 13524 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 08:50:04.127  INFO 13524 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-28 08:50:07.924  INFO 15944 --- [restartedMain] l.study.community.CommunityApplication   : Starting CommunityApplication using Java 11.0.10 on DESKTOP-OQV1AF5 with PID 15944 (D:\ideaworkspace\community\target\classes started by 32026 in D:\ideaworkspace\community)
+2023-02-28 08:50:07.925  INFO 15944 --- [restartedMain] l.study.community.CommunityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 08:50:07.981  INFO 15944 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-28 08:50:07.981  INFO 15944 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-28 08:50:08.982  INFO 15944 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-28 08:50:08.990  INFO 15944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-28 08:50:08.990  INFO 15944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-28 08:50:09.061  INFO 15944 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-28 08:50:09.061  INFO 15944 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1080 ms
+2023-02-28 08:50:09.087  INFO 15944 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 08:50:09.235  INFO 15944 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 08:50:09.245  INFO 15944 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/studycommunity?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true'
+2023-02-28 08:50:09.893  INFO 15944 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-28 08:50:09.920  INFO 15944 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-28 08:50:09.929  INFO 15944 --- [restartedMain] l.study.community.CommunityApplication   : Started CommunityApplication in 2.481 seconds (JVM running for 3.283)
+2023-02-28 08:51:16.838  INFO 15944 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 08:51:16.850  INFO 15944 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

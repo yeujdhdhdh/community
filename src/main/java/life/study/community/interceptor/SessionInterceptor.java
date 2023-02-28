@@ -29,17 +29,14 @@ public class SessionInterceptor implements HandlerInterceptor {
                 if (cookie.getName().equals("token")) {
                     String token = cookie.getValue();
                     UserExample example = new UserExample();
-
                     example.createCriteria().andTokenEqualTo(token);
                     List<User> users = userMapper.selectByExample(example);
-
                     if (users.size() != 0){
                         int unreadCount= notificationService.unreadCount(users.get(0).getId());
                         request.getSession().setAttribute("unreadCount",unreadCount);
                         request.getSession().setAttribute("user", users.get(0));
+
                     }
-
-
                     break;
                 }
             }

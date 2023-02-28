@@ -31,7 +31,6 @@ public class UserRegisterController {
         User user=new User();
         user.setName(username);
         user.setAccountId(UUID.randomUUID().toString());
-        user.setToken(UUID.randomUUID().toString());
         user.setBio(bio);
         user.setUsertype("locationUser");
         user.setPassword(password);

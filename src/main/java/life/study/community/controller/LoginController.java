@@ -59,9 +59,9 @@ public class LoginController {
         accessTokenDto.setClient_secret(clientSecret);
 
         String accessToken= githubProvider.getAccessToken(accessTokenDto);
-        System.out.println("accessToken="+accessToken);
+
         GithubUser githubUser=githubProvider.getUser(accessToken);
-        System.out.println("githubUser="+githubUser);
+
 
         if (githubUser!=null&&githubUser.getId()!=null){
             //登录成功

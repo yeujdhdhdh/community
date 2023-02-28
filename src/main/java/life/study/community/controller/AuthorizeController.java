@@ -46,9 +46,9 @@ public class AuthorizeController {
         accessTokenDto.setClient_id(clientId);
         accessTokenDto.setClient_secret(clientSecret);
         String accessToken= githubProvider.getAccessToken(accessTokenDto);
-        System.out.println("accessToken="+accessToken);
+
         GithubUser  githubUser=githubProvider.getUser(accessToken);
-        System.out.println("githubUser="+githubUser);
+
         if (githubUser!=null&&githubUser.getId()!=null){
             //登录成功
             User user=new User();
@@ -71,6 +71,7 @@ public class AuthorizeController {
     @GetMapping("/logout")
     public String logout(HttpServletRequest request,HttpServletResponse response){
         request.getSession().removeAttribute("user");
+        request.getSession().removeAttribute("unreadCount");
         Cookie cookie=new Cookie("token",null);
         cookie.setMaxAge(0);
         cookie.setPath("/");

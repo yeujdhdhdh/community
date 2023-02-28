@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class UserService {
@@ -60,6 +61,8 @@ public class UserService {
         }else {
             if (users.size() == 0) {
                 //create
+
+                user.setToken(UUID.randomUUID().toString());
                 user.setGmtCreate(System.currentTimeMillis());
                 user.setGmtModified(user.getGmtCreate());
                 userMapper.insert(user);
